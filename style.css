@@ -1,0 +1,239 @@
+html,
+body,
+ul,
+li,
+div,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#menu_wrapper {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F7F8FA;
+    z-index: 2;
+}
+
+#menu_list li {
+    width: 200px;
+    height: 200px;
+    list-style: none;
+    position: absolute;
+    overflow: hidden;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transform-origin: 100% 100%;
+    pointer-events: none;
+}
+
+#menu_list li:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+#menu_list li:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+#menu_list li:nth-child(3) {
+    transform: rotate(180deg);
+}
+
+#menu_list li:nth-child(4) {
+    transform: rotate(270deg);
+}
+
+#menu_list li:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+#menu_list li:nth-child(1):hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 5;
+}
+
+#menu_list li:nth-child(2):hover {
+    transform: rotate(90deg) scale(1.05);
+    z-index: 5;
+}
+
+#menu_list li:nth-child(3):hover {
+    transform: rotate(180deg) scale(1.05);
+    z-index: 5;
+}
+
+#menu_list li:nth-child(4):hover {
+    transform: rotate(270deg) scale(1.05);
+    z-index: 5;
+}
+
+#menu_list li:nth-child(1):hover::after {
+    background: #00d2d3;
+}
+
+#menu_list li:nth-child(2):hover::after {
+    background: #A3BE82;
+}
+
+#menu_list li:nth-child(3):hover::after {
+    background: #ff6b6b;
+}
+
+#menu_list li:nth-child(4):hover::after {
+    background: #54a0ff;
+}
+
+#menu_list a {
+    width: 400px;
+    height: 400px;
+    line-height: 80px;
+    display: inline-block;
+    text-align: center;
+    transform: rotate(-45deg);
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+#menu_list li:nth-child(1) a {
+    background: #00d2d3;
+    color: #01a3a4;
+}
+
+#menu_list li:nth-child(2) a {
+    background: #A3BE82;
+    color: #7b9161;
+}
+
+#menu_list li:nth-child(3) a {
+    background: #ff6b6b;
+    color: #ee5253;
+}
+
+#menu_list li:nth-child(4) a {
+    background: #54a0ff;
+    color: #2e86de;
+}
+
+#menu_center {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border: 5px solid #fff;
+}
+
+#menu_center span {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+    font-family: "GothamPro";
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 1.05px;
+    text-transform: uppercase;
+    color: #A3BE82;
+}
+
+.target {
+    min-height: 50rem;
+}
+
+.wrapper-main {
+    min-height: auto;
+}
+
+.fa-solid {
+    line-height: 120pt;
+    font-size: 25pt;
+}
+
+#menu_content_items .item {
+    display: none;
+}
+
+#menu_content_items .item::before {
+    content: '\f111';
+    font-family: 'Font Awesome 6 Free';
+}
+
+.main-clients-item__slider {
+    background: #F7F8FA;
+    padding: 0;
+}
+
+.main-clients {
+    background: #F7F8FA !important;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.swiper-wrapper {
+    height: auto;
+}
+
+.button {
+    max-width: 400px;
+}
+
+.list_item {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        width: 230px;
+        margin: 20px auto;
+    }
+    
+    .list_item {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #menu {
+        margin: 0 auto 80px auto;
+    }
+
+    #menu_content_items .item::before {
+        content: '';
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #menu, #menu_list a {
+        width: 300px;
+        height: 300px;
+    }
+
+    #menu_list li {
+        width: 150px;
+        height: 150px;
+    }
+
+    .fa-solid {
+        line-height: 75pt;
+    }
+}
